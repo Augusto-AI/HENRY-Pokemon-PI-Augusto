@@ -73,7 +73,7 @@ export default function Home() {
         <NavBar />
         <div className={style.filters}>
           <div>
-            <span>Tipos</span>
+            <span>Types</span>
             <select onChange={(e) => handleFilterType(e)}>
               <option value="all">All</option>
               <option value="grass">Grass</option>
@@ -98,7 +98,7 @@ export default function Home() {
             </select>
           </div>
           <div>
-            <span>Orden by Pokemons</span>
+            <span>Pokemons</span>
             <select onChange={(e) => handleSort(e)}>
               <option value="OrdenBy">Orden by Pokemons</option>
               <option value="ascPokemon">[A-Z]</option>
@@ -106,19 +106,19 @@ export default function Home() {
             </select>
           </div>
           <div>
-            <span> Existentes o creados</span>
+            <span> All & Created</span>
             <select onChange={(e) => handleFilterCreated(e)}>
-              <option value="all">Todos</option>
-              <option value="created">Creados</option>
-              <option value="api">Existentes</option>
+              <option value="all">All</option>
+              <option value="created">Created</option>
+              <option value="api">Api</option>
             </select>
           </div>
           <div>
-            <span>Orden by Ataque</span>
+            <span>Orden by Attack</span>
             <select onChange={(e) => handleAttack(e)}>
-              <option value="attack">Orden By Ataque</option>
-              <option value="ascA">Menor Ataque</option>
-              <option value="descA">Mayor Ataque</option>
+              <option value="attack">Orden By Attack</option>
+              <option value="ascA">Lower Attack</option>
+              <option value="descA">Hight Attack</option>
             </select>
           </div>
         </div>
@@ -133,6 +133,7 @@ export default function Home() {
           pokemonPerPage={pokemonPerPage}
           allPokemon={allPokemon.length}
           paginado={paginado}
+          currentPage={currentPage}
         />
       </div>
     </div>

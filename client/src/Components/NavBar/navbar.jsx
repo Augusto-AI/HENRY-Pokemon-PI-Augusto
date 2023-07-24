@@ -28,7 +28,9 @@ const NavBar = () => {
         <p className={style.pnav}></p>
       </div>
       <div>
-        <img src={Pokemon} alt="Pokemon Logo" className={style.logo} />
+        <Link to="/home">
+          <img src={Pokemon} alt="Pokemon Logo" className={style.logo} />
+        </Link>
       </div>
 
       <div className={style.containernav}>
@@ -56,9 +58,7 @@ const NavBar = () => {
               onClick={(e) => {
                 handleClick(e);
               }}
-            >
-              HOME
-            </Link>
+            ></Link>
           </li>
         </ul>
       </div>
