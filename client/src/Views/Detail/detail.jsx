@@ -6,7 +6,6 @@ import Pokemon from "../../Imagenes/Pokemoncreado.png";
 import style from "./detail.module.css";
 import Fondo from "../../Imagenes/Fondo.mp4";
 import NavBar from "../../Components/NavBar/navbar";
-import Footer from "../../Components/Footer/footer";
 
 export default function Detail(props) {
   const dispatch = useDispatch();
@@ -29,7 +28,6 @@ export default function Detail(props) {
         <source src={Fondo} type="video/mp4" />
       </video>
       <div className={style.container}>
-        <NavBar />
         <div>
           <Link to="/home">
             <button className={style.detaillink}>Back</button>
@@ -74,7 +72,6 @@ export default function Detail(props) {
           )}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

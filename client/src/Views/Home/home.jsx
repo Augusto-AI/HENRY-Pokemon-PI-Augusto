@@ -71,7 +71,6 @@ export default function Home() {
         <source src={Fondo} type="video/mp4" />
       </video>
       <div className={style.container}>
-        <NavBar />
         <div className={style.filters}>
           <div>
             <span>Types</span>
@@ -137,7 +136,6 @@ export default function Home() {
           currentPage={currentPage}
         />
       </div>
-      <Footer />
     </div>
   );
 }

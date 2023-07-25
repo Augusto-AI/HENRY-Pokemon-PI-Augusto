@@ -5,8 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Validate from "../../Components/Validate/Validate";
 import style from "./create.module.css";
 import Fondo from "../../Imagenes/Fondo.mp4";
-import NavBar from "../../Components/NavBar/navbar";
-import Footer from "../../Components/Footer/footer";
 
 export default function Create() {
   const dispatch = useDispatch();
@@ -113,9 +111,7 @@ export default function Create() {
       <video className={style.videobackground} autoPlay loop muted>
         <source src={Fondo} type="video/mp4" />
       </video>
-      <div className={style.container}>
-        <NavBar />
-      </div>
+      <div className={style.container}></div>
       <Link to="/home">
         <button className={style.buttonc}>HOME</button>
       </Link>
@@ -244,7 +240,6 @@ export default function Create() {
           </div>
         ))}
       </div>
-      <Footer />
     </div>
   );
 }
