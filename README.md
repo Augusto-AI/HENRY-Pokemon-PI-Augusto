@@ -256,4 +256,7 @@ Ten en cuenta que en esta instancia no es obligatorio el desarrollo de testing p
 
 <br />
 
-<img src="./pokemon.png" alt="" />
+<img src="./Landing_Page.png" alt="" />
+<img src="./Home.png" alt="" />
+<img src="./Detail.png" alt="" />
+<img src="./Create.png" alt="" />
