@@ -13,8 +13,13 @@ const NavBar = () => {
     setName(event.target.value);
   };
 
-  const handleSearchButtonClick = () => {
-    dispatch(getNamePokemon(name));
+  const handleSearchButtonClick = async () => {
+    try {
+      await dispatch(getNamePokemon(name));
+    } catch (error) {
+      console.log(error);
+      alert("Error searching for Pokemon. Please try again later.");
+    }
   };
 
   function handleClick(e) {
