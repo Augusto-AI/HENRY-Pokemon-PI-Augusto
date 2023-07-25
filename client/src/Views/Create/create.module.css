@@ -11,6 +11,7 @@
 .container {
   position: relative;
   z-index: 1;
+  margin-bottom: 80px;
 }
 .contc {
   border-radius: 8px;

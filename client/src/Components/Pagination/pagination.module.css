@@ -1,6 +1,6 @@
 .pagnav {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .navul {
@@ -16,17 +16,20 @@
 }
 
 .pagnav li:last-child {
-  margin-right: 0;
+  margin-right: 20px;
 }
 
 .pagnav a {
   display: inline-block;
   padding: 5px 10px;
   text-decoration: none;
-  color: #161616; /* Color del texto */
+  color: #2468b1; /* Color del texto */
   background-color: hwb(49 4% 11%);
   font-weight: bold;
   font-size: 18px;
+  font-family: "Fuente";
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .pagnav a:hover {

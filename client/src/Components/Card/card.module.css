@@ -1,7 +1,7 @@
 .card {
   /* background-color: #3f3e3e; */
   border-radius: 8px;
-  box-shadow: 0 5px 10px #fceb00;
+  box-shadow: 0 5px 10px #fbca1f;
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
@@ -22,7 +22,7 @@
   font-size: 16px;
   margin-bottom: 8px;
   line-height: 1.2;
-  color: #fceb00;
+  color: #fbca1f;
   text-decoration: none;
   font-family: "F";
 }
@@ -48,11 +48,11 @@
 .card .types span {
   display: inline-block;
   padding: 2px 8px;
-  background-color: #fceb00;
+  background-color: #fbca1f;
   border-radius: 4px;
   margin-right: 5px;
   font-size: 12px;
-  color: #0e0d0d;
+  color: #2468b1;
   font-family: "Fuente";
 }
 

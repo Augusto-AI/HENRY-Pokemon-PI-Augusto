@@ -33,34 +33,50 @@ const NavBar = () => {
         </Link>
       </div>
 
+      <div>
+        <input
+          className={style.navinput}
+          type="text"
+          value={name}
+          onChange={handleSearchInputChange}
+          placeholder="Find a Pokemon"
+        />
+        <button className={style.buttonnav} onClick={handleSearchButtonClick}>
+          <span>FIND</span>
+        </button>
+      </div>
+
       <div className={style.containernav}>
         <ul>
-          <li className={style.linknavli}>
+          <li className={style.button}>
             <Link to="/Create">CREATE A NEW POKEMON</Link>
           </li>
         </ul>
-        <div>
-          <input
-            className={style.navinput}
-            type="text"
-            value={name}
-            onChange={handleSearchInputChange}
-            placeholder="Find a Pokemon..."
-          />
-          <button className={style.buttonnav} onClick={handleSearchButtonClick}>
-            <span>FIND</span>
-          </button>
-        </div>
-        <ul>
-          <li className={style.linknavli2}>
-            <Link
-              to="/home"
-              onClick={(e) => {
-                handleClick(e);
-              }}
-            ></Link>
-          </li>
-        </ul>
+      </div>
+      <div className="card">
+        <a className="social-link1" href="http://www.github.comn/Augusto-IA">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#fff"
+            height="1em"
+            viewBox="0 0 496 512"
+          >
+            <path d="http://www.github.comn/Augusto-IA"></path>
+          </svg>
+        </a>
+        <a
+          className="social-link2"
+          href="https://www.linkedin.com/in/augusto-herrera-velasquez-36679060/"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 448 512"
+            fill="#fff"
+          >
+            <path d="https://www.linkedin.com/in/augusto-herrera-velasquez-36679060/"></path>
+          </svg>{" "}
+        </a>
       </div>
     </div>
   );

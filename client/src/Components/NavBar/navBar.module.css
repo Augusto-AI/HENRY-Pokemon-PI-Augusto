@@ -22,9 +22,10 @@
 }
 
 .navinput {
-  margin-right: 10px;
-  color: #fceb00;
-  /* background-color: #fceb00; */
+  margin-right: 5px;
+  margin-left: 50px;
+  color: #fbca1f;
+  background-color: #fbca1f;
   border: 2px solid;
   border-radius: 5px;
   width: 150px;
@@ -34,17 +35,18 @@
 .buttonnav {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #000000;
+  background-color: #2468b1;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-family: "F";
-  color: #fceb00;
+  color: #fbca1f;
 }
 
 .containernav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .linknavli {
@@ -54,10 +56,27 @@
   font-size: 20px;
 }
 
-.linknavli2 {
-  margin-left: auto;
+.button {
+  margin-left: 50px;
+  background: #fbca1f;
   font-family: "Fuente";
-  text-decoration: none;
+  padding: 0.6em 1.3em;
+  text-decoration-color: #2468b1;
+  font-weight: 900;
+  font-size: 15px;
+  border: 3px solid #2468b1;
+  border-radius: 0.4em;
+  text-decoration: none !important;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 .linknavli {
@@ -67,7 +86,7 @@
 .linknavli a {
   text-decoration: none;
   display: inline;
-  color: #fceb00;
+  color: #fbca1f;
 }
 
 .linknavli2 {
@@ -77,7 +96,7 @@
 .linknavli2 a {
   text-decoration: none;
   display: inline;
-  color: #fceb00;
+  color: #fbca1f;
 }
 
 /* navBar.module.css */
@@ -85,4 +104,132 @@
   width: 200px; /* Ajusta el tamaño del logo según tus necesidades */
   height: 120px;
   /* Agrega otros estilos de posicionamiento según sea necesario */
+}
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+.card {
+  display: flex;
+  height: 70px;
+  width: 270px;
+  margin-right: 5px;
+  margin-left: 50px;
+}
+
+.card svg {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card .social-link1,
+.card .social-link2,
+.card .social-link3,
+.card .social-link4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.card svg {
+  transform: scale(1);
+}
+
+.card .social-link1:hover {
+  background-color: #1a1e22;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link2:hover {
+  background-color: #0a66c2;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link3:hover {
+  background-color: #0059f7;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link4:hover {
+  background-color: #1d4292;
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

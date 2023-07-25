@@ -14,6 +14,7 @@ import {
 import NavBar from "../../Components/NavBar/navbar";
 import style from "./home.module.css";
 import Fondo from "../../Imagenes/Fondo.mp4";
+import Footer from "../../Components/Footer/footer.jsx";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -136,6 +137,7 @@ export default function Home() {
           currentPage={currentPage}
         />
       </div>
+      <Footer />
     </div>
   );
 }

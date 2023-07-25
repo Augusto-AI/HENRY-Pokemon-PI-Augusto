@@ -6,6 +6,7 @@ import Validate from "../../Components/Validate/Validate";
 import style from "./create.module.css";
 import Fondo from "../../Imagenes/Fondo.mp4";
 import NavBar from "../../Components/NavBar/navbar";
+import Footer from "../../Components/Footer/footer";
 
 export default function Create() {
   const dispatch = useDispatch();
@@ -243,6 +244,7 @@ export default function Create() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

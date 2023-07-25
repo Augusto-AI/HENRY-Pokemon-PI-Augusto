@@ -1,7 +1,7 @@
 .detail {
   /* background-color: #3f3e3e; */
   border-radius: 8px;
-  box-shadow: 0 5px 10px #fceb00;
+  box-shadow: 0 5px 10px #fbca1f;
   padding: 10px;
   width: 25%;
   box-sizing: border-box;
@@ -12,6 +12,9 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 60px;
 }
 
 .detail:hover {
@@ -39,7 +42,7 @@
   font-weight: bold;
   margin-bottom: 10px;
   font-family: "F";
-  color: #000000;
+  color: #fbca1f;
 }
 
 .detail img {
@@ -51,7 +54,7 @@
 
 .detailp {
   margin-bottom: 5px;
-  color: #fceb00;
+  color: #fbca1f;
   font-weight: bold;
 }
 
@@ -69,6 +72,6 @@
   margin-bottom: 10px;
   font-family: "Fuente";
   background-color: #3f3e3e;
-  color: #fceb00;
+  color: #fbca1f;
   font-size: 20px;
 }

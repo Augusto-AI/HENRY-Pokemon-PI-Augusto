@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import style from "./landing.module.css";
 import MundoPokemon from "../../Imagenes/MundoPokemon.mp4";
+import Footer from "../../Components/Footer/footer";
 
 function Landing() {
   return (
@@ -16,6 +17,8 @@ function Landing() {
           </Link>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

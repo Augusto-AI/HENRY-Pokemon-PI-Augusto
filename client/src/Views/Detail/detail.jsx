@@ -6,6 +6,7 @@ import Pokemon from "../../Imagenes/Pokemoncreado.png";
 import style from "./detail.module.css";
 import Fondo from "../../Imagenes/Fondo.mp4";
 import NavBar from "../../Components/NavBar/navbar";
+import Footer from "../../Components/Footer/footer";
 
 export default function Detail(props) {
   const dispatch = useDispatch();
@@ -73,6 +74,7 @@ export default function Detail(props) {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
