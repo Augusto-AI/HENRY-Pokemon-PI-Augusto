@@ -1,3 +1,6 @@
+//? Aca me traigo todos los controllers para empezar a manejar los req, res
+//? hacia la Api y la Base de datos local
+
 const {
   getAllpokemon,
   postPokemons,
@@ -60,6 +63,8 @@ const postPokemonHandler = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+//? Aca exporto todos los Handlers con el manejo del GET y POST para los action en Redux
 
 module.exports = {
   getPokemonHandler,

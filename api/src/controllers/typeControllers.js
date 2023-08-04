@@ -1,6 +1,8 @@
 const axios = require("axios");
 const { Type } = require("../db");
 
+//? Esta función se encarga de obtener y sincronizar los tipos de Pokémon desde
+//?la API pública de PokeAPI y la base de datos local.
 const getAllTypes = async () => {
   const types = await Type.findAll({ attributes: ["name", "id"] });
 

@@ -5,6 +5,8 @@ const path = require("path");
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
+//? Aca se conecta a la base de datos local Pokemon:
+
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
   {
@@ -41,8 +43,9 @@ sequelize.models = Object.fromEntries(capsEntries);
 // Para relacionarlos hacemos un destructuring
 const { Pokemon, Type } = sequelize.models;
 
-// Aca vendrian las relaciones
-// Product.hasMany(Reviews);
+//? Aca estan las relaciones
+//? de las tablas de los Pokemon
+
 Pokemon.belongsToMany(Type, { through: "PokemonType" });
 Type.belongsToMany(Pokemon, { through: "PokemonType" });
 

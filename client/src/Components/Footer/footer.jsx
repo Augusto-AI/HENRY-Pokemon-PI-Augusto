@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className={style.footer}>
-      <p>API creado con Pokeapi por Augusto Herrera para PI Henry 2023.</p>
+      <p>APP creado con PokeApi por Augusto Herrera para PI Henry 2023.</p>
       <div className={style.icons}>
         <a
           href="https://www.linkedin.com/in/augusto-herrera-velasquez-36679060/"

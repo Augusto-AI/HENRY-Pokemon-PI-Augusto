@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Pokemon from "../../Imagenes/Pokemoncreado.png";
 import style from "./detail.module.css";
 import Fondo from "../../Imagenes/Fondo.mp4";
-import NavBar from "../../Components/NavBar/navbar";
 
 export default function Detail(props) {
   const dispatch = useDispatch();

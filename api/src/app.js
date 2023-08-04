@@ -3,10 +3,20 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const routes = require("./routes/index.js");
+const app = express();
 
-require("./db.js"); // postgres +Sql ( Tablas: Types.js / Pokemons.js)
+require("./db.js"); //? postgres +Sql ( Tablas: Types.js / Pokemons.js)
 
-const server = express(); // Llamando al api/ndex.js : Levantar el servidor
+const server = express(); //? Llamando al api/ndex.js : Levantar el servidor
+
+//* Modificación del PORT para el deploy
+const port = process.env.PORT ?? 8080;
+
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
+
+//** */
 
 server.name = "API";
 
@@ -15,7 +25,7 @@ server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
 server.use(morgan("dev"));
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "*"); //? update to match the domain you will make the request from
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
@@ -25,7 +35,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/", routes); // pokemosRoutes.js / typeRoutes.js
+server.use("/", routes); //? pokemosRoutes.js / typeRoutes.js
 
 // Error catching endware.
 server.use((err, req, res, next) => {
