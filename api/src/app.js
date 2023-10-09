@@ -5,27 +5,18 @@ const morgan = require("morgan");
 const routes = require("./routes/index.js");
 const app = express();
 
-require("./db.js"); //? postgres +Sql ( Tablas: Types.js / Pokemons.js)
+require("./db.js"); // Include your database setup code here (e.g., PostgreSQL)
 
-const server = express(); //? Llamando al api/ndex.js : Levantar el servidor
+// Create an Express server instance
+const server = express();
 
-//* Modificación del PORT para el deploy
-const port = process.env.PORT ?? 8080;
-
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
-});
-
-//** */
-
-server.name = "API";
-
+// Use middleware
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
 server.use(morgan("dev"));
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); //? update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
@@ -35,15 +26,22 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/", routes); //? pokemosRoutes.js / typeRoutes.js
+// Mount your routes
+server.use("/", routes); // This should be where your routes are mounted
 
-// Error catching endware.
+// Error handling middleware
 server.use((err, req, res, next) => {
-  // eslint-disable-line no-unused-vars
   const status = err.status || 500;
   const message = err.message || err;
   console.error(err);
   res.status(status).send(message);
 });
 
+// Define the port and start the server
+const port = process.env.PORT || 8080;
+server.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
+
+// Export the server instance
 module.exports = server;
